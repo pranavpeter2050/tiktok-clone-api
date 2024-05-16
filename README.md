@@ -43,7 +43,7 @@ Type in `exit` to exit the laravel tinker Psy Shell (tinker terminal)
 
 ## Set up Laravel Sanctum
 
-Apparently, Laravel Sanctum gets installed while installing Laravel Breeze.
+Apparently, Laravel Sanctum gets installed while installing Laravel Breeze. Read Sanctum related documentation [here](https://laravel.com/docs/11.x/sanctum#main-content).
 
 ## About Laravel
 
