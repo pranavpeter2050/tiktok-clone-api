@@ -7,6 +7,44 @@
 <a href="https://packagist.org/packages/laravel/framework"><img src="https://img.shields.io/packagist/l/laravel/framework" alt="License"></a>
 </p>
 
+# Tiktok clone backend using Laravel
+
+Reference Youtube link `https://www.youtube.com/watch?v=CHSL0Btbj_o` at [1:49:45]()
+Reference Github repo: `https://github.com/John-Weeks-Dev/tiktok-clone`
+
+## Install Laravel Breeze
+
+```bash
+composer require laravel/breeze --dev
+
+php artisan breeze:install
+
+Which Breeze stack would you like to install?
+  Blade with Alpine ...................................................................................... blade  
+  Livewire (Volt Class API) with Alpine ............................................................... livewire  
+  Livewire (Volt Functional API) with Alpine ............................................... livewire-functional  
+  React with Inertia ..................................................................................... react  
+  Vue with Inertia ......................................................................................... vue  
+  API only ................................................................................................. api
+
+// select API only
+
+```
+
+## Laravel Tinker
+
+Create a user by using laravel tinker. Run command `php artisan tinker` in the terminal. Once the tinker terminal starts running, run the below command to create a user.
+
+```bash
+App\Models\User::create(["name"=>"Pranav Peter","email"=>"pranav@mail.com","password"=>bcrypt("123123123")]);
+```
+
+Type in `exit` to exit the laravel tinker Psy Shell (tinker terminal)
+
+## Set up Laravel Sanctum
+
+Apparently, Laravel Sanctum gets installed while installing Laravel Breeze.
+
 ## About Laravel
 
 Laravel is a web application framework with expressive, elegant syntax. We believe development must be an enjoyable and creative experience to be truly fulfilling. Laravel takes the pain out of development by easing common tasks used in many web projects, such as:
