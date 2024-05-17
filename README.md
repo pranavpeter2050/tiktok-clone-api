@@ -104,4 +104,10 @@ Route::get('/', function () {
 });
 ```
 
-We create a `Service` called `FileService`
+We create a `Service` called `FileService` to handle the user profile image upload.
+
+## Create `GlobalController`
+
+```bash
+php artisan make:controller Api/GlobalController --resource
+```
