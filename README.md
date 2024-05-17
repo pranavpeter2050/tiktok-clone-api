@@ -45,6 +45,39 @@ Type in `exit` to exit the laravel tinker Psy Shell (tinker terminal)
 
 Apparently, Laravel Sanctum gets installed while installing Laravel Breeze. Read Sanctum related documentation [here](https://laravel.com/docs/11.x/sanctum#main-content).
 
+Edit the session related .env variable as below
+
+```bash
+SESSION_DRIVER=cookie
+# This is for the backend
+SESSION_DOMAIN=localhost
+# This is for the frontend
+SANCTUM_STATEFUL_DOMAINS=localhost:3000
+```
+
+### IMPORTANT: Make sure to change the port for laravel app, eg. `http://localhost:8040`
+
+## Make `UserController` and `UserCollection`
+
+```bash
+php artisan make:controller Api/UserController --resource
+
+php artisan make:resource UserCollection
+```
+
+There are some changes in the `users` table, so we run `php artisan migrate:reset` to clear the data and edit the users-table-migration file.
+
+```php
+Schema::create('users', function (Blueprint $table) {
+  ...
+  $table->string('bio')->nullable();
+  $table->text('image')->nullable();
+  ...
+});
+```
+
+Then we need to make relevant changes in `RegisteredUserController` and `Users` model file.
+
 ## About Laravel
 
 Laravel is a web application framework with expressive, elegant syntax. We believe development must be an enjoyable and creative experience to be truly fulfilling. Laravel takes the pain out of development by easing common tasks used in many web projects, such as:
