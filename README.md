@@ -111,3 +111,18 @@ We create a `Service` called `FileService` to handle the user profile image uplo
 ```bash
 php artisan make:controller Api/GlobalController --resource
 ```
+
+## Define `Post` model, migration and controller
+
+```bash
+php artisan make:model Post -mc --resource
+
+// create AllPostsCollection
+php artisan make:resource AllPostsCollection
+```
+
+## Create `ProfileController`
+
+```bash
+php artisan make:controller Api/ProfileController --resource
+```
