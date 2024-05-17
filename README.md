@@ -126,3 +126,9 @@ php artisan make:resource AllPostsCollection
 ```bash
 php artisan make:controller Api/ProfileController --resource
 ```
+
+## Create `HomeController`
+
+```bash
+php artisan make:controller Api/HomeController --resource
+```
