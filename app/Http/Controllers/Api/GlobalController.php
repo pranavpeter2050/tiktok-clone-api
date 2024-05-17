@@ -15,8 +15,8 @@ class GlobalController extends Controller
     public function getRandomUsers()
     {
         try {
-            $suggested = User::inRandomOrder()->limits(5)->get();
-            $following = User::inRandomOrder()->limits(10)->get();
+            $suggested = User::inRandomOrder()->limit(5)->get();
+            $following = User::inRandomOrder()->limit(10)->get();
 
             return response()->json([
                 'suggested' => new UsersCollection($suggested),
