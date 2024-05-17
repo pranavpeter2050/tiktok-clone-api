@@ -147,3 +147,7 @@ php artisan make:model Like -mc --resource
 // create AllPostsCollection
 php artisan make:resource AllPostsCollection
 ```
+
+## Create API endpoints
+
+Define the API endpoints in `api.php`. This completes all steps for the backend.
