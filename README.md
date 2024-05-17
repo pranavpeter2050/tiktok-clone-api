@@ -132,3 +132,18 @@ php artisan make:controller Api/ProfileController --resource
 ```bash
 php artisan make:controller Api/HomeController --resource
 ```
+
+## Define `Comment` model, migration and controller
+
+```bash
+php artisan make:model Comment -mc --resource
+```
+
+## Define `Like` model, migration and controller
+
+```bash
+php artisan make:model Like -mc --resource
+
+// create AllPostsCollection
+php artisan make:resource AllPostsCollection
+```
