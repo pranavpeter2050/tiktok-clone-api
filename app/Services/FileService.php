@@ -9,7 +9,7 @@ class FileService
 {
   public function updateImage($model, $request)
   {
-    $image = Image::make($request->file('image'));
+    $image = Image::read($request->file('image'));
 
     if (!empty($model->image)) {
       $currentImage = public_path() . $model->image;
